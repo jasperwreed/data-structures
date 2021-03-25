@@ -53,6 +53,28 @@ class LinkedList {
     }
   }
 
+  length() {
+    let len = 0
+
+    while(this.head) {
+      this.head = this.head.next
+      len++
+    }
+    
+    console.log(len)
+  }
+
+  isPalindrome() {
+    let results = []
+    
+    while(this.head) {
+        results.push(this.head.data)
+        this.head = this.head.next
+    }
+
+    console.log(results.join('') === results.reverse().join(''))
+};
+
   display() {
     while(this.head) {
       console.log(this.head.data)
@@ -75,4 +97,8 @@ list.insertAtBeginning(10)
 
 // list.sort()
 
-list.display()
+list.length()
+
+// list.isPalindrome()
+
+// list.display()
