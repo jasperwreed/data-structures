@@ -38,13 +38,21 @@ class LinkedList {
   }
 
   display() {
-    let node = this.head
-    while(node) {
-      console.log(node)
-      node = node.next
+    while(this.head) {
+      console.log(this.head.data)
+      this.head = this.head.next
     }
   }
+
 }
+
+// const display = (list) => {
+//   let head = list.head
+//   while(head) {
+//     console.log(head.data)
+//     head = head.next
+//   }
+// }
 
 let list = new LinkedList()
 
