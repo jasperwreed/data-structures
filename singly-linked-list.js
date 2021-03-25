@@ -37,6 +37,22 @@ class LinkedList {
     return this.head
   }
 
+  // need to work this out
+  sort() {
+    let currentNode = this.head
+    let nextNode = currentNode.next
+
+    while(currentNode) {
+      if(currentNode.data > nextNode.data) {
+        console.log('greater')
+        nextNode = currentNode
+      } else {
+        console.log('less than')
+        currentNode = nextNode
+      }
+    }
+  }
+
   display() {
     while(this.head) {
       console.log(this.head.data)
@@ -46,14 +62,6 @@ class LinkedList {
 
 }
 
-// const display = (list) => {
-//   let head = list.head
-//   while(head) {
-//     console.log(head.data)
-//     head = head.next
-//   }
-// }
-
 let list = new LinkedList()
 
 list.insertAtEnd(1)
@@ -61,5 +69,10 @@ list.insertAtEnd(2)
 list.insertAtEnd(3)
 list.insertAtEnd(4)
 list.insertAtEnd(5)
+list.insertAtBeginning(3)
+list.insertAtBeginning(5)
+list.insertAtBeginning(10)
+
+// list.sort()
 
 list.display()
